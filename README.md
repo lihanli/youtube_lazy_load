@@ -1,7 +1,7 @@
 youtube_lazy_load
 =================
 
-It will replace a youtube link with a preview image and a play button. Once the play button is clicked then it loads the iframe embed code.
+Replaces youtube links with preview images and play buttons. Once the play button is clicked then it loads the iframe embed code.
 
 #### Usage:
 ```html
