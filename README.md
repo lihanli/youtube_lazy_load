@@ -8,8 +8,8 @@ It will replace a youtube link with a preview image and a play button. Once the 
 <a class='youtube-lazy-link' href='http://www.youtube.com/watch?v=YZLOVDJKUpM&feature=g-all-u'>optional title</a>
 ```
 Should work with any youtube link
-#### Example:
-http://twenty.cc/u/robbercat/microsoft_ads
+#### Demo:
+<a href="http://twenty.cc/u/robbercat/microsoft_ads" target="_blank">Microsoft Ads</a>
 #### Requirements:
 jQuery
 #### Includes code from:
