@@ -1,0 +1,6 @@
+a.youtube-lazy-link{width:480px;height:360px;vertical-align:top;background:#555;text-decoration:none;color:#ddd;text-align:left;text-shadow:-1px 0 #000,0 1px #000,1px 0 #000,0 -1px #000;display:inline-block;background-size:contain !important}
+a.youtube-lazy-link:hover{text-decoration:none;color:#fff}
+.youtube-lazy-link-div{width:480px;height:360px;background:url("http://lh4.googleusercontent.com/-QCeB6REIFlE/TuGUlY3N46I/AAAAAAAAAaI/9-urEUtpKcI/s800/youtube-play-button.png") center center no-repeat;position:absolute}
+.youtube-lazy-link-div:hover{background:url("http://lh5.googleusercontent.com/-oBFjswrosz4/TuHqainRc3I/AAAAAAAAAbE/t3rMQuSJdLA/s800/youtube-play-button-hover.png") center center no-repeat}
+.youtube-lazy-link-info{font-size:110%;padding:2px 6px;background:#000;background:rgba(0,0,0,0.5)}
+
