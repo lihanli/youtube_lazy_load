@@ -9,6 +9,12 @@ getUrlParams = (parser) ->
   urlParams[decode(match[1])] = decode(match[2]) while match = search.exec(query)
   urlParams
 
+attrEscape = (attr) ->
+  attr.replace('"', '%22').replace("'", '%27')
+
+isBlank = (str) ->
+  !str || /^\s*$/.test(str)
+
 $ ->
   $('a.youtube-lazy-link').each ->
     parser = document.createElement('a')
@@ -26,8 +32,16 @@ $ ->
     $(@).html("<div class=\"youtube-lazy-link-info\">#{youtubeTitle}</div>") unless isBlank(youtubeTitle)
     $(@).prepend "<div class=\"youtube-lazy-link-div\"></div>"
     $(@).css "background", "#000 url(http://i2.ytimg.com/vi/#{youid}/0.jpg) center center no-repeat"
-
-    videoFrame = "<iframe width=\"" + parseInt($(@).css("width")) + "\" height=\"" + parseInt($(@).css("height")) + "\" style=\"vertical-align:top;\" src='http://www.youtube.com/embed/#{attrEscape embedCode}' frameborder=\"0\" allowfullscreen></iframe>"
+    videoFrame = """
+      <iframe
+        width='#{parseInt $(@).css("width")}'
+        height='#{parseInt $(@).css("height")}'
+        style='vertical-align:top;'
+        src='http://www.youtube.com/embed/#{attrEscape embedCode}'
+        frameborder='0'
+        allowfullscreen
+      ></iframe>
+    """
     $(@).click ->
       $(@).replaceWith videoFrame
       false
